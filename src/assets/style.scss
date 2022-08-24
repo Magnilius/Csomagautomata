@@ -1,0 +1,109 @@
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+$primary: #34495e;
+$white: white;
+
+:root {
+    font-size: 14px;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.navbar svg {
+    max-width: 30px;
+    max-height: 24px;
+    fill: $white;
+}
+
+.navbar {
+    background-color: $primary!important;
+    box-shadow: 5px 5px 5px 5px rgb(52 73 94 / 43%);
+}
+
+.homeGrid{
+  display: grid;
+  gap: 2rem;
+  height: 100vh;
+  align-content: center;
+  justify-items: center;
+}
+
+.homeBtn {
+    height: 20rem;
+    width: 40rem;
+    max-width: 100vw;
+
+    background-color: $primary;
+    border-radius: 10px;
+    color: $white;
+    box-shadow: 5px 5px 5px 5px rgb(52 73 94 / 43%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+.middleSquare {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    min-width: 30vw;
+    min-height: fit-content;
+    width: fit-content;
+
+    background-color: $primary;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 5px rgb(52 73 94 / 43%);
+    color: $white;
+
+    text-align: center;
+
+    padding: 2rem;
+ 
+    h3 {
+        font-size: calc(1rem + 0.6vw);
+    }
+}
+
+.btn-light {
+    color: $primary;
+    min-width: 60%;
+}
+
+
+.form-row{ 
+    margin-bottom: 2rem;
+}
+
+.deliveryBox {
+    padding: 3rem;
+}
+
+@media screen and (min-width: 1150px){
+    .homeGrid{
+       grid-template-columns: repeat(2, 1fr);
+    }
+ }
+
+ @media screen and (max-width: 1000px){
+    .middleSquare {
+        min-width: 40vw;
+    }
+ }
+
+ @media screen and (max-width: 760px){
+    .middleSquare {
+        min-width: 80vw;
+    }
+
+    .btn-light {
+        min-height: 10vh;
+    }
+ }
+
